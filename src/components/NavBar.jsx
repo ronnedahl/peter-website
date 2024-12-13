@@ -46,6 +46,7 @@ function NavBar() {
 
 return (
     <>
+      <header>
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <h3 className="navbar__logo">
           Min<span> Portfolio</span>
@@ -72,6 +73,7 @@ return (
           <button>INFORMATION</button>
         </figure>
       </nav>
+      </header>
       
       {/* Mobilmeny */}
       {openNav && (

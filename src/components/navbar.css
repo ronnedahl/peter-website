@@ -10,20 +10,29 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+header .navbar a {
+  color: #FFFFFF;
+  margin: 0 1em;
+  text-decoration: none;
+  font-weight:400;
+  font-size: 1.4rem;
+}
 
-.navbar {
+
+header .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: transparent;
-  width: 100%;
+  width:100%;
   height: 2rem;
+  position: fixed;
   top: 0;
   z-index: 1000;
-  padding-top: 4rem;
+  padding-top:4rem;
 }
 
-.navbar.scrolled {
+header .navbar.scrolled {
 
   background-color: rgba(0,0,0,0.8);
   padding: 4rem;
@@ -34,20 +43,12 @@ body {
 
 }
 
-.navbar span {
+header .navbar span {
   color: rgb(255, 0, 0);
 }
 
-.navbar h3 {
+header .navbar h3 {
   color: #FFFFFF;
-}
-
-.navbar a {
-  color: #FFFFFF;
-  margin: 0 1em;
-  text-decoration: none;
-  font-weight: 200;
-  font-size: 1.4rem;
 }
 
 .hide-modal{
@@ -99,23 +100,23 @@ body {
   color: #ff6347; /* Accentfärg vid hover */
 }
 
-.navbar__logo span,
-.navbar__logo {
+.header .navbar__logo span,
+.header .navbar__logo {
   font-size: 1.6rem;
 }
 
-.navbar__logo {
-  margin-left: 3rem;
+header .navbar__logo {
+  margin-left: 5rem;
 }
 
-.navbar__btn {
-  margin-right: 3rem;
+header .navbar__btn{
+  margin-right:4rem;
 }
 
-.navbar__btn button {
+header .navbar__btn button {
   padding: 1rem 3rem;
-  background-color: rgb(196, 166, 16);
-
+  background-color:rgb(255,0,0);
+  border-radius: 20px;
   border: none;
   color: #FFFFFF;
   font-weight: 600;
@@ -124,7 +125,7 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-.navbar a:hover {
+.header .navbar a:hover {
   color: #c8fb61;
 }
 
@@ -155,6 +156,11 @@ body {
   font-weight: 500;
   color: green;
   font-size: 1.2rem;
+}
+
+.modal-overlay img{
+  width:50%;
+  margin:0px 15px;
 }
 
 .modal-content button {
@@ -195,6 +201,11 @@ body {
   .navbar{
     padding-top:0
   } 
+
+  header .navbar button{
+    padding:0.1rem 1.5rem;
+    font-size:0.7rem;
+  }
   .navbar a {
     margin-bottom: 1rem;
   }
