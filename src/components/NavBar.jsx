@@ -3,6 +3,9 @@ import './navbar.css';
 
 import { HashLink } from 'react-router-hash-link';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import information from '../../public/assets/information.svg'
+import svartInformation from '../../public/assets/svart.png'
+
 
 function NavBar() {
   const [openModal, setOpenModal] = useState(false);
@@ -48,7 +51,7 @@ return (
           Min<span> Portfolio</span>
         </h3>
         
-        <img className='hide-modal' onClick={modalPopup} src ="/assets/information.svg" 
+        <img className='hide-modal' onClick={modalPopup} src ={ information } 
         style ={{width:"50px", marginTop:"-1.8rem", cursor:"pointer",color:"#FFF"}}
         />
         
@@ -89,7 +92,7 @@ return (
         <div className="modal-overlay">
           <div className="modal-content">
             <h2>VIKTIG Information</h2>
-            <img src="/assets/svart.png" alt="Viktig information" />
+            <img src={svartInformation} alt="Viktig information" />
             <p>Vi är fullt försäkrade under hela LIA perioden av folkuniversitetet</p>
             <button onClick={modalPopup}>Stäng</button>
           </div>

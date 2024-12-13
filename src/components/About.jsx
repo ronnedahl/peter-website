@@ -4,6 +4,7 @@ import './about.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
 import CustomAudioPlayer from './CustomAudioPlayer';
+import mycV from '../../public/assets/cv.png'
 
 function About() {
 
@@ -33,7 +34,7 @@ return (
       <h2>Min Arbetslivs Erfarenhet</h2>
       <section id="mitt-cv" className="about-container">
       <figure className='about-container__img left'>
-           <img className="about-container__img-rotate-left" src="/assets/cv.png"></img>
+           <img className="about-container__img-rotate-left" src={mycV}></img>
            </figure>
         <section className='about-container__inner'>
         
@@ -69,7 +70,7 @@ return (
 
         </section>
         <figure className='about-container__img right'>
-           <img className="about-container__img-rotate-right" src="/assets/cv.png"></img>
+           <img className="about-container__img-rotate-right" src={mycV}></img>
           </figure>
       </section>
      

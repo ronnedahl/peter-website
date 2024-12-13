@@ -1,6 +1,8 @@
 // src/components/Header.js
 import React from 'react';
 import './header.css';
+import myBackground from '../../public/assets/my-background.jpg'
+
 
 
 function Header() {
@@ -35,7 +37,7 @@ function Header() {
               </section>
             </article>
             <figure className='header__hero-img'>
-              <img src="/assets/my-background.jpg"></img>
+              <img src={myBackground}></img>
               <article className='header__my-contact'>
               <p>Tel:070-489 30 20</p>
               <p>Mail: dev.peter.ai@gmail.com</p>
