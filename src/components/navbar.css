@@ -1,0 +1,268 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  width: 100%;
+  height: 2rem;
+  top: 0;
+  z-index: 1000;
+  padding-top: 4rem;
+}
+
+.navbar.scrolled {
+
+  background-color: rgba(0,0,0,0.8);
+  padding: 4rem;
+  transition: background-color 0.3s ease;
+  position: fixed;
+  top:0;
+  left:0;
+
+}
+
+.navbar span {
+  color: rgb(255, 0, 0);
+}
+
+.navbar h3 {
+  color: #FFFFFF;
+}
+
+.navbar a {
+  color: #FFFFFF;
+  margin: 0 1em;
+  text-decoration: none;
+  font-weight: 200;
+  font-size: 1.4rem;
+}
+
+.hide-modal{
+  display:none;
+}
+
+.navbar .navbar__hamburger{
+  
+    display: none; /* Dölj standard */
+    font-size: 1.5rem;
+    cursor: pointer;
+  
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.95); /* Svart bakgrund med lite transparens */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Säkerställ att den ligger ovanpå allt annat */
+}
+
+.mobile-menu__close {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.mobile-menu__links a {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display:flex;
+  flex-direction: column;
+}
+
+.mobile-menu__links a:hover {
+  color: #ff6347; /* Accentfärg vid hover */
+}
+
+.navbar__logo span,
+.navbar__logo {
+  font-size: 1.6rem;
+}
+
+.navbar__logo {
+  margin-left: 3rem;
+}
+
+.navbar__btn {
+  margin-right: 3rem;
+}
+
+.navbar__btn button {
+  padding: 1rem 3rem;
+  background-color: rgb(196, 166, 16);
+
+  border: none;
+  color: #FFFFFF;
+  font-weight: 600;
+  letter-spacing: 0.20rem;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar a:hover {
+  color: #c8fb61;
+}
+
+.modal-overlay {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+}
+
+.modal-overlay p {
+  font-weight: 500;
+  color: green;
+  font-size: 1.2rem;
+}
+
+.modal-content button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background-color: #0056b3;
+}
+
+.navbar__text-center.active {
+  opacity: 1;
+  pointer-events: auto;
+  /* Möjliggör interaktion när menyn är öppen */
+}
+
+/* Styling för länkarna när menyn är öppen */
+.navbar__text-center a {
+  color: #fff;
+  font-size: 2rem;
+  margin: 1rem 0;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.navbar__text-center a:hover {
+  color: #61dafb;
+}
+/************ här börjar mediaquery ***************/
+
+@media(max-width: 768px) {
+  .navbar{
+    padding-top:0
+  } 
+  .navbar a {
+    margin-bottom: 1rem;
+  }
+  .navbar__logo{
+    margin-top:-2rem;
+    margin-left:0rem;
+  }
+
+  .header__hero-img{
+    order:1;
+    margin-top:1rem
+  }
+  .header__hero-text-inner{
+    order:2;
+  }
+
+  .header__hero-subtext h4{
+    font-size:1rem;
+  }
+  .header__my-contact{
+    margin-bottom:2rem
+  }
+  .header__my-contact p{
+    font-size:1rem;
+
+  }
+  .hide-modal{
+    display:block;
+  }
+
+  .navbar__btn button {
+    display:none;
+  }
+  .navbar .navbar__hamburger{
+    display:block;
+    position:absolute;
+    top:0;
+    right:0;
+    padding: 2rem;   
+  }
+
+  .navbar.scrolled{
+
+    display: none;
+  }
+
+  .navbar__btn button {
+    padding: 1rem 1rem;
+    background-color: #ff6347;
+    /* Anpassad bakgrundsfärg */
+    border-radius: 20px;
+    border: none;
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  .navbar__text-center {
+    position: relative;
+    top: initial;
+    left: initial;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    flex-direction: row;
+    opacity: 1;
+    pointer-events: auto;
+  }
+}

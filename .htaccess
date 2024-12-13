@@ -1,0 +1,11 @@
+# Aktivera Rewrite Engine för att hantera SPA (Single Page Application) routing
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
+
+# Ställ in korrekta MIME-typer
+AddType text/css .css
+AddType application/javascript .js

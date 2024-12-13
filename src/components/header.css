@@ -1,0 +1,185 @@
+
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+.header {
+  min-width:100vw;
+  min-height: 70vh;
+  background: linear-gradient(rgb(82, 6, 223), rgb(119, 9, 95));
+  padding-bottom:4rem;
+  }
+
+  .header__hero {
+    max-width: 100%;;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.header__hero-img{
+  margin-top:2rem;
+  margin-right: 2rem;
+}
+
+.header__hero-contact-info{
+  margin-left:4rem;
+  margin-top:1rem;
+}
+.header__hero-text{
+  display:flex;
+  justify-content: space-between;
+  width:80vw;
+ padding-top:7rem;
+}
+
+.header__hero-text img{
+  width:400px;
+  border-radius: 50%;
+ 
+}
+
+.header .header__hero-texth2{
+  margin-right:16rem;
+}
+
+.header__hero-text h1{
+ font-size:4rem;
+ margin-bottom:0;
+ color:#FFFFFF;
+ line-height: 4.5rem;
+ max-width:1300px;
+ font-weight: 300;
+ margin-bottom:1rem
+}
+
+.header__hero-text h2{
+  font-size:4rem;
+  margin-top:0;
+  color:#FFFFFF;
+}
+
+.header__hero-text h3{
+  color:#FFFFFF;
+  font-size:1.5rem;
+  font-weight: 300;
+  max-width: 1100px;
+}
+
+.header__hero-subtext{
+  margin-top:1rem;
+}
+
+.header__hero-subtext h4{
+  font-size:1.3rem;
+  color: #FFF;
+  font-weight: 300;
+  max-width: 1100px;
+}
+
+.header__hero-btn{
+  margin-right: 1rem;
+ 
+}
+
+.header__hero-texth2{
+  margin-top:1rem;
+}
+¨
+.header__hero-text-inner .header__hero-textcont h3{
+  color:#FFF;
+}
+
+.header__hero .header__hero-text-inner{
+  padding-top:6rem;
+}
+
+.header__hero-btn-group{
+  margin-top:3rem;
+}
+.header__hero-btn-group .header__hero-omdome:hover,
+.header__hero-btn-group .header__hero-btn:hover{
+  background-color:red;
+  cursor: pointer;
+}
+
+.header__hero-img img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover; /* Om det behövs för att fylla ett område utan att sträcka bilden */
+  display: block;
+}
+
+.header__hero-img p{
+  font-size:1.2rem;
+  font-weight: 300;
+  color:#FFFFFF;
+  line-height: 1.5rem;
+}
+
+.header button{
+  padding:1rem;
+  border-radius: 20px;
+  background-color: transparent;
+  color:#FFFFFF;
+  font-size: 1.3rem;
+  font-weight: 300;
+  margin-right:2rem;
+}
+
+@media (max-width: 760px) {
+
+ .header__hero-text{
+   flex-direction: column;
+ }
+ .header__hero-text h1{
+  font-size:1.5rem;
+  line-height:2rem;
+ }
+
+ .header__hero-text h2{
+  font-size:1.5rem;
+ }
+
+ .header__hero-contact-info{
+  margin:0;
+ }
+
+ .header .header__hero-texth2{
+  margin-right:-2rem;
+ }
+ .header h3{
+  font-size:0.9rem;
+  margin-top:10px;
+ }
+
+ .test{
+  margin-top:1rem;
+  max-width:400px;
+  min-width:360px;
+ }
+.header .test-2{
+  margin-right:0rem;
+}
+
+.header__hero .header__hero-text-inner{
+  padding:0rem;
+}
+
+ .header__hero-text .header__hero-img img{
+  width:150px;
+ }
+ .header__hero-btn-group button{
+   padding:0.3rem;
+   font-size: 1rem;
+   margin-bottom:2rem;
+ }
+}
